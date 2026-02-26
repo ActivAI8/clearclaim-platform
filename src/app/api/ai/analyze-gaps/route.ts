@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
     const snippetsContext = (snippets || []).map((s) => ({ text: s.snippet_text, type: s.snippet_type, confidence: s.confidence }));
     const docsContext = (documents || []).map((d) => ({ name: d.file_name, category: d.category, status: d.processing_status }));
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
     const result = await model.generateContent([
       GAP_ANALYSIS_PROMPT,

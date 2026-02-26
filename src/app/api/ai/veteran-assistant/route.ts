@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     const { message, conditions, history } = await request.json();
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: SYSTEM_PROMPT + (conditions?.length > 0
         ? `\n\nThis veteran is claiming the following conditions: ${conditions.join(", ")}. Tailor your responses to be relevant to these conditions.`
         : ""),

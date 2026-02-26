@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
       category: g.category_name, status: g.gap_status, description: g.description,
     }));
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
     const result = await model.generateContent([
       SYSTEM_PROMPT,

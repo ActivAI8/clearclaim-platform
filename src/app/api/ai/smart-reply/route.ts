@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
     const vet = caseRes.data?.veteran;
     const pendingTasks = (taskRes.data || []).filter((t) => t.status !== "completed");
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
     const result = await model.generateContent([
       SYSTEM_PROMPT,

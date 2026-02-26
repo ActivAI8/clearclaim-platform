@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
       .eq("case_id", caseId);
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: `You are an AI document intelligence engine for VA disability claims. Based on the documents and conditions on file, generate a realistic activity feed of AI-extracted insights.
 
 For each document, generate 1-3 intelligence findings that would be extracted from that type of document. Make them specific, actionable, and reference page numbers.

@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       .eq("case_id", caseId)
       .eq("file_path", filePath);
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
     const mimeType = fileData.type;
     let analysisResult: string;
 

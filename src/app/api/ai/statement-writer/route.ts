@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     const contextNote = `Veteran: ${veteranName || "Unknown"}. Branch: ${branch || "Unknown"}. Conditions being claimed: ${(conditions || []).join(", ") || "Not specified"}. Begin the guided interview.`;
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: SYSTEM_PROMPT + "\n\n" + contextNote,
     });
 

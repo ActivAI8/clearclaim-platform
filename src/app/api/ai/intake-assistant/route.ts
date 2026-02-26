@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
     const { message, history, extractedData } = await request.json();
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: SYSTEM_PROMPT + (extractedData
         ? `\n\nCurrent extracted data so far:\n${JSON.stringify(extractedData, null, 2)}\n\nUpdate and include ALL previously extracted fields plus any new ones.`
         : ""),

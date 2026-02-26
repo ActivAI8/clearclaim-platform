@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const { veteranName, branch, serviceStart, serviceEnd, conditions, buddyName, buddyRelationship, specificEvents } = await request.json();
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: `You are a VA disability claims expert specializing in writing buddy/lay statements.
 
 Generate a professional buddy statement (also called a "buddy letter" or "lay statement") that a fellow service member, family member, or friend can customize and sign.

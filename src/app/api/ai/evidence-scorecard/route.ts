@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       .eq("case_id", caseId);
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: `You are a VA disability claims evidence analyst. Analyze the evidence on file for each claimed condition and produce a sufficiency scorecard.
 
 For each condition, evaluate whether the following evidence types exist:
